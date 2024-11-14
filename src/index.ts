@@ -16,6 +16,7 @@ app.post('/products', (req: Request, res: Response) => {
 app.get('/products', (req: Request, res: Response) => {
     // Logika untuk mendapatkan semua produk
     res.send('List of products');
+})
 // Endpoint untuk register user
 app.post('/register', (req: Request, res: Response) => {
     const { username, password } = req.body;
