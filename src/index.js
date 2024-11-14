@@ -1,5 +1,24 @@
 "use strict";
-const greet = (name) => {
-    return `Hello, ${name}!`;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-console.log(greet("World"));
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const app = (0, express_1.default)();
+const port = 3000;
+app.use(express_1.default.json());
+// Endpoint untuk register user
+app.post('/register', (req, res) => {
+    const { username, password } = req.body;
+    // Logika untuk register user
+    res.send('User registered');
+});
+// Endpoint untuk login user
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+    // Logika untuk login user
+    res.send('User logged in');
+});
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
