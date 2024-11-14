@@ -41,6 +41,7 @@ app.get('/orders', (req, res) => {
     // Logika untuk mendapatkan semua order
     res.send('List of orders');
 });
+//simulasi bug ditemukan dan ditambahkan
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
